@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,73 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="_2_dices" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.34999999999999998" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="casinoBackground" translatesAutoresizingMaskIntoConstraints="NO" id="hb0-QM-Wja">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LogoCasino" translatesAutoresizingMaskIntoConstraints="NO" id="plT-wR-Vta">
+                                <rect key="frame" x="138" y="124" width="138" height="133"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="plT-wR-Vta" secondAttribute="height" multiplier="133:128" id="cyp-ze-5BJ"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="Aws-St-5Bb">
+                                <rect key="frame" x="86" y="395.5" width="242" height="105"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dice1" translatesAutoresizingMaskIntoConstraints="NO" id="aWm-lk-Cdt">
+                                        <rect key="frame" x="0.0" y="0.0" width="105" height="105"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dice1" translatesAutoresizingMaskIntoConstraints="NO" id="xCo-vY-eH8">
+                                        <rect key="frame" x="137" y="0.0" width="105" height="105"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Aws-St-5Bb" secondAttribute="height" multiplier="242:105" id="7hb-tV-8FP"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xjr-EP-n8S">
+                                <rect key="frame" x="83.5" y="580.5" width="247" height="59"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="36"/>
+                                <state key="normal" title="Tirar los Dados!">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="rollPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8vV-6T-txy"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Xjr-EP-n8S" firstAttribute="top" secondItem="Aws-St-5Bb" secondAttribute="bottom" constant="80" id="1PP-Ew-sCf"/>
+                            <constraint firstItem="plT-wR-Vta" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1kF-hw-HT6"/>
+                            <constraint firstItem="hb0-QM-Wja" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5d4-R8-G4X"/>
+                            <constraint firstItem="Aws-St-5Bb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OFG-W3-rtq"/>
+                            <constraint firstItem="hb0-QM-Wja" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="RC2-ga-9Cj"/>
+                            <constraint firstItem="hb0-QM-Wja" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="cPJ-7h-R3M"/>
+                            <constraint firstItem="Xjr-EP-n8S" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dI6-xb-ZYD"/>
+                            <constraint firstItem="Aws-St-5Bb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="mf2-7s-yJO"/>
+                            <constraint firstAttribute="bottom" secondItem="hb0-QM-Wja" secondAttribute="bottom" id="qIx-wG-6IV"/>
+                            <constraint firstItem="plT-wR-Vta" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="xeL-Aj-64f"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="imageViewDiceLeft" destination="aWm-lk-Cdt" id="7lA-y6-Xcw"/>
+                        <outlet property="imageViewDiceRight" destination="xCo-vY-eH8" id="nlk-cx-QIY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="57.971014492753625" y="20.758928571428569"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="LogoCasino" width="133" height="133"/>
+        <image name="casinoBackground" width="193" height="193"/>
+        <image name="dice1" width="105.5" height="105.5"/>
+    </resources>
 </document>
