@@ -56,8 +56,10 @@ class ViewController: UIViewController {
             options: UIView.AnimationOptions.curveEaseInOut,
             animations: {
                 
+                //Animación para imagen dado izquierdo
                 self.imageViewDiceLeft.transform = CGAffineTransform(scaleX: 0.6, y: 0.6).concatenating(CGAffineTransform(rotationAngle: CGFloat.pi/2)).concatenating(CGAffineTransform(translationX: -100, y: 100))
                 
+                //Animación para imagen dado derecho
                 self.imageViewDiceRight.transform = CGAffineTransform(scaleX: 0.6, y: 0.6).concatenating(CGAffineTransform(rotationAngle: CGFloat.pi/2)).concatenating(CGAffineTransform(translationX: 100, y: 100))
                 
                 //Codigo para efecto de desaparecer los dados
